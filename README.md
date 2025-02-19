@@ -1,17 +1,25 @@
-# Toyota 404 Page
+<div align="center">
 
-A modern, animated 404 error page designed for Toyota, built with React, TypeScript, and SCSS.
+# Toyota-Style 404 Page
+
+A modern, animated 404 error page inspired by Toyota's design language.
+
+[Live Demo](#) · [Report Bug](#) · [Request Feature](#)
+
+</div>
+
+> **Disclaimer**: This project is created for educational purposes only. It is not affiliated with, authorized, maintained, sponsored, or endorsed by Toyota Motor Corporation or any of its affiliates or subsidiaries.
 
 ## Features
 
 - Modern, responsive design
-- Animated Toyota car illustration
-- Toyota brand colors and styling
+- Animated car illustration
+- Toyota-inspired brand styling
 - Accessible design with ARIA labels
 - Built with React + TypeScript
 - Styled with SCSS
 
-## Getting Started
+## Quick Start
 
 1. Clone the repository:
 ```bash
@@ -24,24 +32,37 @@ cd toyota-404
 npm install
 ```
 
-3. Run the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-## Technologies Used
+## Built With
 
 - React
 - TypeScript
 - SCSS
 - Vite
 
+## Project Purpose
+
+This project was created as a learning exercise to practice:
+- Modern React development with TypeScript
+- CSS animations and transitions
+- Responsive design principles
+- Brand-aligned UI/UX design
+- Git workflow and collaboration
+
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
-Made with ❤️ by Timo Haseloff
+
+### Made with code and creativity by Timo Haseloff
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue)](https://www.linkedin.com/in/timo-haseloff-b4a3b4293/)
+
 </div>
