@@ -5,6 +5,7 @@
 A modern, animated 404 error page inspired by Toyota's design language.
 
 [Live Demo](https://toyota-404-six.vercel.app/) · [Report Bug](#) · [Request Feature](#)
+![grafik](https://github.com/user-attachments/assets/7f4f0263-f491-4df4-af66-6de39949bf06)
 
 </div>
 
