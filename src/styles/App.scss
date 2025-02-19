@@ -1,0 +1,284 @@
+// Toyota brand colors
+$toyota-red: #EB0A1E;
+$toyota-black: #000000;
+$toyota-gray: #58595B;
+$toyota-light-gray: #F7F7F7;
+
+.toyota-404 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  &__container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  &__logo {
+    margin-bottom: 3rem;
+    
+    img {
+      height: 32px;
+      width: auto;
+    }
+  }
+
+  &__content {
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 12rem;
+      font-weight: 700;
+      color: $toyota-red;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: $toyota-black;
+      margin: 1rem 0;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: $toyota-gray;
+      margin: 1.5rem 0 2.5rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__button {
+    background-color: $toyota-red;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      background-color: darken($toyota-red, 5%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba($toyota-red, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba($toyota-red, 0.1);
+    }
+  }
+
+  &__illustration {
+    position: relative;
+    height: 120px;
+    margin-top: 4rem;
+  }
+
+  &__car {
+    width: 80px;
+    height: 24px;
+    background-color: $toyota-red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    animation: carMove 2s infinite ease-in-out;
+
+    // Car body
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 18px;
+      background-color: $toyota-red;
+      top: -14px;
+      left: 15px;
+      border-radius: 25px 35px 0 0;
+      box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    // Windshield
+    &:after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 12px;
+      background: linear-gradient(135deg, #a8e6ff 0%, #4ba3d9 100%);
+      top: -12px;
+      left: 35px;
+      border-radius: 25px 35px 0 0;
+      transform: skew(-20deg);
+      box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    // Wheels
+    .wheel {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: #333;
+      bottom: -6px;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #666;
+        top: 3px;
+        left: 3px;
+        border-radius: 50%;
+      }
+
+      &--front {
+        left: 12px;
+      }
+
+      &--rear {
+        right: 12px;
+      }
+    }
+
+    // Headlight
+    .headlight {
+      position: absolute;
+      width: 4px;
+      height: 8px;
+      background-color: #ffeb3b;
+      bottom: 8px;
+      left: 2px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    }
+
+    // Taillight
+    .taillight {
+      position: absolute;
+      width: 4px;
+      height: 8px;
+      background-color: #ff4444;
+      bottom: 8px;
+      right: 2px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+    }
+
+    // Grill
+    .grill {
+      position: absolute;
+      width: 12px;
+      height: 6px;
+      background: linear-gradient(to right, #444, #666);
+      bottom: 6px;
+      left: 4px;
+      border-radius: 2px;
+    }
+  }
+
+  &__road {
+    position: absolute;
+    bottom: 40px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background-color: $toyota-gray;
+    opacity: 0.3;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        $toyota-gray,
+        $toyota-gray 8px,
+        transparent 8px,
+        transparent 24px
+      );
+      opacity: 0.2;
+      animation: roadMove 1s infinite linear;
+    }
+  }
+
+  &__button {
+    background-color: $toyota-red;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      background-color: darken($toyota-red, 5%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba($toyota-red, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba($toyota-red, 0.1);
+    }
+  }
+}
+
+@keyframes carMove {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateX(-30px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(30px);
+  }
+}
+
+@keyframes roadMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -24px 0;
+  }
+}
+
+// Add responsive styles
+@media (max-width: 768px) {
+  .toyota-404 {
+    &__content {
+      h1 {
+        font-size: 8rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
